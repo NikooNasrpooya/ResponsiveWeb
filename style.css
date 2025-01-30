@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    font-size: 16px;
+}
+
+.main-container{
+    width: 100%;
+    max-width: 1800px;
+    margin: 0px auto;
+    font-size: 1em;
+}
+
+header, footer{
+    background-color: gray;
+    color: white;
+    padding: 20px;
+
+}
+
+header nav{
+    display: flex;
+
+}
+
+header nav span{
+    margin-right: 15px;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    
+}
+
+main section{
+    overflow: hidden;
+}
+main .content{
+    padding: 20px;
+}
+
+main .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+}
+
+main .menu span{
+    border-bottom: 2px solid rgb(58, 56, 56);
+    margin-bottom: 4px;
+}
+
+main .content .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+main .content .cards .card{
+    padding: 50px 0px;
+    margin: 10px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: blueviolet;
+
+}
+
+
+/* media query */
+
+@media screen and (max-width:900px){
+    main{
+        grid-template-columns: 2fr 4fr; 
+    }
+    main .content .cards{
+        grid-template-columns: repeat(2, 1fr);
+
+
+}
+
+
+@media screen and (max-width:600px){
+    main{
+        grid-template-columns: 1fr; 
+    } 
+    main .content .cards{
+        display: block;
+    }
+    main .menu{
+        display: none;
+    }
+    main .content .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header nav{
+        display: none;
+    }
+
+    .main-container{
+        font-size: 1.3em;
+    }
+
+}
